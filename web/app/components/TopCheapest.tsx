@@ -5,6 +5,8 @@ interface Props {
   products: Product[];
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_BASE;
+
 /**
  * Get Top products
  * @param queryParams parameters filters
@@ -14,7 +16,7 @@ const getTopProducts = async (): Promise<Product[]> => {
   // Filter only params that contains valid values
 
   // Request to endpoint
-  const data = await fetch(`http://localhost:3001/api/top-products`, {
+  const data = await fetch(`${API_URL}/api/top-products`, {
     // Revalidate data
     next: { revalidate: 60 },
   })
