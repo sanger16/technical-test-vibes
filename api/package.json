@@ -12,7 +12,7 @@
   "main": "build/index.js",
   "scripts": {
     "dev": "node --watch --loader ts-node/esm src/index.ts",
-    "start": "ts-node src/index.ts",
+    "start": "node build/index.js",
     "build": "tsc"
   },
   "dependencies": {
