@@ -2,6 +2,8 @@ import { ProductResponse, SearchParams } from "@ddelgado/shared-types";
 import ProductList from "../components/ProductList";
 import { TopCheapest } from "../components/TopCheapest";
 
+const API_URL = process.env.NEXT_PUBLIC_API_BASE;
+
 /**
  * Get All products from server
  * @param queryParams parameters filters
@@ -21,7 +23,7 @@ const getProducts = async (
 
   // Request to endpoint
   const data: ProductResponse = await fetch(
-    `http://localhost:3001/api/products?${params}`,
+    `${API_URL}/api/products?${params}`,
     {
       // Revalidate data
       next: { revalidate: 60 },
@@ -47,7 +49,7 @@ export default async function ProductsPage({
   return (
     <div className="flex flex-col mx-[200px]">
       <span className="text-5xl p-5 text-center">Lista de Productos</span>
-        <ProductList initialData={products} />
+      <ProductList initialData={products} />
       <TopCheapest />
     </div>
   );

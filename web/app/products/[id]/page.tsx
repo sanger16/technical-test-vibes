@@ -7,10 +7,12 @@ interface Props {
   params: { id: string };
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_BASE;
+
 const getProduct = async (id: string): Promise<Product> => {
   try {
     const { product } = await fetch(
-      `http://localhost:3001/api/products/${id}`,
+      `${API_URL}/api/products/${id}`,
       {
         next: {
           revalidate: 60 * 60 * 30 * 6,
