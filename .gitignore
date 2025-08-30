@@ -1,0 +1,44 @@
+api/node_modules
+api/build
+web/node_modules
+web/next-env.ts
+
+# dependencies
+*/node_modules
+web/.pnp
+web/.pnp.*
+web/.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+web/coverage
+
+# next.js
+web/.next/
+web/out/
+
+# production
+web/build
+
+# misc
+web/.DS_Store
+*.pem
+
+# debug
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+web/.env*
+
+# vercel
+web/.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
