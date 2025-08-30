@@ -78,8 +78,8 @@ export const ProductFilter = () => {
       <div className=" bg-blue-600 rounded-br-2xl w-60 py-1 text-center text-sm mb-5">
         <h3 className="text-2xl text-white">Filtros</h3>
       </div>
-      <form className="text-black flex flex-row mx-[60px] justify-between">
-        <div className="flex flex-col">
+      <form className="text-black flex flex-col xl:flex-row xl:mx-[60px] justify-center items-center gap-5">
+        <div className="flex flex-col mb-5 w-[200px]">
           <label htmlFor="search" className="ml-3">
             Buscar
           </label>
@@ -94,7 +94,7 @@ export const ProductFilter = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-5  w-[200px]">
           <label htmlFor="sort">Ordenar por:</label>
           <div className="grid shrink-0 grid-cols-1 focus-within:relative">
             <select
@@ -123,7 +123,7 @@ export const ProductFilter = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-5  w-[200px]">
           <label htmlFor="order">Ordenar:</label>
           <div className="grid shrink-0 grid-cols-1 focus-within:relative">
             <select
@@ -152,7 +152,7 @@ export const ProductFilter = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col mb-5">
+        <div className="flex flex-col mb-5  w-[200px]">
           <label htmlFor="order">Disponibilidad:</label>
           <div className="grid shrink-0 grid-cols-1 focus-within:relative">
             <select

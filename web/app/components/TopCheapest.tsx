@@ -36,7 +36,7 @@ export const TopCheapest = async () => {
         <div className=" bg-blue-500 rounded-br-2xl w-100 py-1 text-center text-sm">
           <h3 className="text-2xl text-white">Productos de Oportunidad</h3>
         </div>
-        <div className="flex flex-row  p-[60px]">
+        <div className="flex flex-col xl:flex-row justify-around gap-3 p-[60px]">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
